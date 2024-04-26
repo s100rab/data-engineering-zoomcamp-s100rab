@@ -11,9 +11,10 @@ for MONTH in {1..12}; do
 
   URL="${URL_PREFIX}/${TAXI_TYPE}/${TAXI_TYPE}_tripdata_${YEAR}-${FMONTH}.csv.gz"
 
-  LOCAL_PREFIX="data/raw/${TAXI_TYPE}/${YEAR}/${FMONTH}"
+  LOCAL_PREFIX="/e/HCL_Technical_Lead/SIE_OSIV_HCL_TRAINING/PYTHON_DS_DE/Pgadmin_datatalks_sql_DATAPIPELINE/05-batch/data/raw/${TAXI_TYPE}/${YEAR}/${FMONTH}"
   LOCAL_FILE="${TAXI_TYPE}_tripdata_${YEAR}_${FMONTH}.csv.gz"
   LOCAL_PATH="${LOCAL_PREFIX}/${LOCAL_FILE}"
+
 
   echo "downloading ${URL} to ${LOCAL_PATH}"
   mkdir -p ${LOCAL_PREFIX}
