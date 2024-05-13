@@ -611,3 +611,8 @@ logs/
 05-batch/data/report/revenue/yellow/part-00017-d8012ac3-dba0-48dc-acc6-25023deb19d4-c000.snappy.parquet
 05-batch/data/report/revenue/yellow/part-00018-d8012ac3-dba0-48dc-acc6-25023deb19d4-c000.snappy.parquet
 05-batch/data/report/revenue/yellow/part-00019-d8012ac3-dba0-48dc-acc6-25023deb19d4-c000.snappy.parquet
+05-batch/code/lib/gcs-connector-hadoop2-latest.jar
+05-batch/code/lib/gcs-connector-hadoop3-latest.jar
+05-batch/code/gcs-connector-hadoop3-2.2.5.jar
+05-batch/lib/gcs-connector-hadoop2-latest.jar
+05-batch/lib/gcs-connector-hadoop3-latest.jar

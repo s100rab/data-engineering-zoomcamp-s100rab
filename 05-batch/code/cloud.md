@@ -75,9 +75,9 @@ TODO
 
 Params for the job:
 
-* `--input_green=gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/green/2021/*/`
-* `--input_yellow=gs://dtc_data_lake_de-zoomcamp-nytaxi/pq/yellow/2021/*/`
-* `--output=gs://dtc_data_lake_de-zoomcamp-nytaxi/report-2021`
+* `--input_green=gs://terraform_gcs_dataset_s100rab_16042024/pq/green/2021/*/`
+* `--input_yellow=gs://terraform_gcs_dataset_s100rab_16042024/pq/yellow/2021/*/`
+* `--output=gs://terraform_gcs_dataset_s100rab_16042024/report-2021`
 
 
 Using Google Cloud SDK for submitting to dataproc
