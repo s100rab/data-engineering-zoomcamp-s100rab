@@ -1,4 +1,4 @@
-INPUT_DATA_PATH = '../resources/rides.csv'
+INPUT_DATA_PATH = '06-streaming\\python\\resources\\rides.csv'
 
 RIDE_KEY_SCHEMA_PATH = '../resources/schemas/taxi_ride_key.avsc'
 RIDE_VALUE_SCHEMA_PATH = '../resources/schemas/taxi_ride_value.avsc'
