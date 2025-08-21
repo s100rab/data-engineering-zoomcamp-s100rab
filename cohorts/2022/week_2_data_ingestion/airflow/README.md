@@ -1,3 +1,63 @@
+# End-to-End Data Engineering Pipeline: From Ingestion to Cloud Data Lake
+
+This project demonstrates the design and implementation of a robust, automated data engineering pipeline. I handle the entire data lifecycle, from ingesting raw data and building a scalable data lake to orchestrating complex workflows with Apache Airflow and loading the data into a cloud data warehouse.
+
+---
+
+## 🚀 Project Overview
+
+The goal of this project was to build a production-grade data pipeline that efficiently processes and moves large datasets. I chose to work with the NYC Taxi trip dataset, a classic big data challenge, to showcase my ability to handle real-world data engineering problems.
+
+This repository covers the entire process, including:
+* **Building a Data Lake**: Designing and implementing a central repository for raw data using Google Cloud Storage.
+* **Workflow Orchestration**: Creating complex, scheduled, and dependency-aware data workflows (DAGs) with Apache Airflow.
+* **Containerization**: Setting up a complete, isolated development environment for Airflow using Docker.
+* **Multi-Destination Ingestion**: Engineering pipelines to load data into both a local PostgreSQL database for development and Google BigQuery for cloud-based analytics.
+* **Cloud-Native Integration**: Utilizing GCP's native Transfer Service to ingest data directly from other cloud providers (AWS S3).
+
+---
+
+## 🛠️ Technologies & Tools
+
+* **Orchestration**: Apache Airflow
+* **Cloud Platform**: Google Cloud Platform (GCP)
+    * **Data Lake**: Google Cloud Storage (GCS)
+    * **Data Warehouse**: Google BigQuery
+    * **Cloud-Native ETL**: GCP Transfer Service
+* **Containerization**: Docker & Docker-Compose
+* **Databases**: PostgreSQL
+* **Data Formats**: Parquet, CSV
+* **Languages**: Python, SQL
+* **Infrastructure as Code**: Terraform
+
+---
+
+## 🏛️ Project Architecture & Workflow
+
+The core of this project is a Directed Acyclic Graph (DAG) orchestrated by Airflow. This workflow automates the following sequence of tasks:
+
+1.  **Download Data**: A task is triggered on a schedule to download the raw NYC Taxi trip data (CSV files) from a web source.
+2.  **Data Transformation**: The downloaded CSV data is converted into **Parquet**, a highly efficient columnar storage format optimized for analytical queries.
+3.  **Upload to Data Lake**: The processed Parquet file is uploaded to a **Google Cloud Storage (GCS) bucket**, which serves as our central data lake. This provides a durable, scalable, and cost-effective storage solution.
+4.  **Load to Data Warehouse**: An external table is created in **Google BigQuery** that directly points to the Parquet files in our data lake. This ELT (Extract, Load, Transform) approach allows for immediate querying and analysis on the cloud without needing to manage a separate database infrastructure.
+5.  **Local Ingestion (for Development)**: A parallel pipeline was also developed to ingest the same data into a local **PostgreSQL** database, demonstrating the flexibility to work with different data destinations.
+
+
+---
+
+## ✨ Key Features & Accomplishments
+
+* **Automated & Resilient Pipelines**: Designed and implemented fully automated data ingestion workflows using **Apache Airflow**. I created custom DAGs with clear task dependencies, scheduling, and parameterization using Jinja templating, ensuring the pipelines are robust and idempotent.
+
+* **Containerized Airflow Environment**: Built a custom, portable Airflow environment using **Docker and Docker-Compose**. This involved customizing the official Airflow image to include necessary GCP libraries and credentials, creating a reproducible and isolated setup that mirrors a production environment.
+
+* **Data Lake & Warehouse Implementation**: Successfully built a cloud data architecture on **GCP**. I configured Google Cloud Storage as a data lake for raw and processed data and used **BigQuery** as a serverless data warehouse to run analytics, demonstrating a strong understanding of modern cloud data platforms.
+
+* **Efficient Data Processing**: Implemented a crucial optimization step by converting raw CSV data to **Parquet**. This significantly improves storage efficiency and query performance, a key practice in big data processing.
+
+* **Infrastructure as Code (IaC)**: Utilized **Terraform** to programmatically provision and manage cloud resources, including the GCP Transfer Service jobs. This demonstrates best practices for creating maintainable and scalable cloud infrastructure.
+
+
 ### Concepts
 
  [Airflow Concepts and Architecture](docs/1_concepts.md)
